@@ -1,8 +1,8 @@
 const Product = require('../database/models/Productos'); /* aca cuando cambiaba se me rompia de nuevo */
 
 exports.index = async (req, res) => {
-  const productos = await Product.find();
-  res.render('products/index', { productos }); //cambie la const aca tenia products y anduvo
+  const product = await Product.find();
+  res.render('products/index', { product }); //cambie la const aca tenia products y anduvo
 };
 
 exports.new = (req, res) => {
@@ -18,12 +18,13 @@ exports.create = async (req, res) => {
 exports.show = async (req, res) => {
   const product = await Product.findById(req.params.id);
   res.render('products/show', { product }); 
-};  //este anda
+};  //este anda por lo menos al principio
 
-exports.edit = async (req, res) => {
-  const productos = await Product.findById(req.params.id);
-  res.render('products/edit', { productos }); //cambie los 2 product por productos
-};
+ exports.edit = async (req, res) => {
+  const product = await Product.findById(req.params.id);
+  res.render('products/edit', { product }); 
+}; 
+
 
 exports.update = async (req, res) => {
   const { id } = req.params;

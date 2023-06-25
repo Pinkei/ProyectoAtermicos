@@ -5,4 +5,4 @@ const atermicosSchema = new mongoose.Schema({
   precio_unitario: Number,
 });
 
-module.exports = mongoose.model('productos', atermicosSchema); //mi primera collegion va con P mayuscula Productos, la otra se me hizo cuando yo creo en la pagina.
+module.exports = mongoose.model('Products', atermicosSchema); //mi primera collegion va con P mayuscula Productos, la otra se me hizo cuando yo creo en la pagina.

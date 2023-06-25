@@ -3,7 +3,7 @@
 
 <a href="/products/{{product._id}} /edit">Editar</a>
 
-<form action="/products/ {{product._id}}" method="post">
+<form action="/products/ {{product._id}}/delete" method="post">
   <input type="hidden" name="_method" value="delete">
   <button type="submit">Eliminar</button>
 </form>
