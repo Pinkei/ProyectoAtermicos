@@ -5,16 +5,16 @@ port = 3000;
 
 
 const app = express();
-
 app.set('view engine', 'hbs');
+
+//----------------------Middlewares
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 //--------------------------------configuracion de mongo aplication----------------------------
 mongoose.connect('mongodb://127.0.0.1:27017/Atermicos', { useNewUrlParser: true, useUnifiedTopology: true });
-
 mongoose.connection.on('error', err => {
-
   console.error('Error de conexión a la base de datos:', err);
 
 });

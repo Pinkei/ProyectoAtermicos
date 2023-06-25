@@ -7,7 +7,7 @@ router.get('/', productController.index);
 router.get('/new', productController.new);
 router.post('/', productController.create);
 router.get('/:id', productController.show);
-router.get('/:id/edit', productController.edit); //la ruta para mi esta bien
+router.get('/:id/edit', productController.edit); 
 router.post('/:id', productController.update);
 router.post('/:id/delete', productController.delete);
 
