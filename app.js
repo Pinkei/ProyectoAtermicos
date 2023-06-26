@@ -1,6 +1,7 @@
 const express = require ('express');
 const mongoose = require ('mongoose');
 const methodOverride = require('method-override');
+const router = require("./controllers/contactoController")
 
 port = 3000;
 
@@ -28,7 +29,7 @@ const productRoutes = require('./routes/products');
 //-------------------------------------Rutas_-----------------------------
 app.use('/products', productRoutes);
 app.get('/', homeController.index);
-
+app.use("/",router)
 
 
 

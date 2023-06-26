@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/contacto.css">
     <title>Contacto</title>
 </head>
 <body>
-    
+    <h2>Pongase en contacto con nosotros</h2>
+
+    <div class="container">
+        {{#if error }}
+        <p>{{ error }}</p>
+        {{/if}}
+
+        <form class="form" action="/enviar" method="post">
+
+            <fieldset class="campos">
+
+                <legend>Complete el formulario</legend>
+
+                <label for="nombre"> Nombre: </label>
+                <input class="celda" type="text" name="nombre" id="nombre">
+                <label for="email"> Email: </label>
+                <input class="celda" type="text" name="email" id="email">
+                <label for="mensaje"> Mensaje: </label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+
+                <input class="btn btn-dark botones" type="submit" value="Enviar">
+                <input class="btn btn-dark botones" type="reset" value="Restablecer">
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
