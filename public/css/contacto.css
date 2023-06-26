@@ -12,10 +12,14 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  legend,h2 {
+  legend,h2,h3 {
     text-align: center;
     color: #333;
     
+  }
+  .FormExitoso{
+    text-align: center;
+    color: #333;
   }
   
   form {
