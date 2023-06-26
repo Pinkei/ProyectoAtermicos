@@ -1,9 +1,65 @@
-<a href="/products/new">Nuevo producto</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/newProducts.css">
+  <title>Products</title>
+</head>
+<body>
+  <div class="">
+    
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/products/new">Crea una baldosa acorde a tu pileta</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        {{#each product}}
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/products/{{_id}} ">{{producto}}</a>
+        </li>
+        {{/each}}
+        
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<ul>
-  {{#each product}}
-    <li>
-      <a href="/products/{{_id}} ">{{producto}}</a>
-    </li>
-{{/each}}
-</ul>
+  </div>
+
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="1000">
+      <img src="/img/piletas/carrusel4.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="/img/piletas/carrusel2.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="/img/piletas/carrusel3.jpeg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" href="/">Volver a la pagina principal</a></li>
+  </ul>
+</nav>
+</body>
+</html>

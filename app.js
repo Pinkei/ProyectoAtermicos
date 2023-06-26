@@ -1,5 +1,6 @@
 const express = require ('express');
 const mongoose = require ('mongoose');
+const methodOverride = require('method-override');
 
 port = 3000;
 
@@ -11,6 +12,7 @@ app.set('view engine', 'hbs');
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(methodOverride('_method'));
 
 //--------------------------------configuracion de mongo aplication----------------------------
 mongoose.connect('mongodb://127.0.0.1:27017/Atermicos', { useNewUrlParser: true, useUnifiedTopology: true });

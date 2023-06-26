@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "6498795ff07351090834851c"
+  },
+  "producto": "borde L",
+  "precio_unitario": 1200,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "64987b0b3d4052710e4110ca"
+  },
+  "producto": "borde ballena 40x60",
+  "precio_unitario": 2800,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6498c1628a52ac8e7525ad14"
+  },
+  "producto": "Solarium 40x40",
+  "precio_unitario": 1345,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6498c1768a52ac8e7525ad18"
+  },
+  "producto": "Borde ballena 40x40",
+  "precio_unitario": 1400,
+  "__v": 0
+}]
